@@ -1,3 +1,6 @@
+require 'cgi'
+require 'yaml'
+
 module Farm
   class Runner
     def self.run(*args)
@@ -7,7 +10,7 @@ module Farm
         raise ArgumentError, 'Cannot run items which do not respond to perform'
       end
 
-      @payload_object.perform
+      %x[rake farm:run CMD='#{CGI.escape(YAML.dump(@payload_object))}']
     end
   end
 end
