@@ -1,5 +1,6 @@
 require 'active_support/basic_object'
 require 'active_support/core_ext/module/aliasing'
+require 'farm/runner'
 
 module Farm
   class FarmProxy < ActiveSupport::BasicObject
