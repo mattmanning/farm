@@ -11,7 +11,7 @@ module Farm
         raise ArgumentError, 'Cannot run items which do not respond to perform'
       end
 
-      Farm::Http.heroku_run "rake farm:run CMD='#{CGI.escape(YAML.dump(@payload_object))}'"
+      Farm::Http.heroku_run CGI.escape(YAML.dump(@payload_object))
     end
   end
 end
