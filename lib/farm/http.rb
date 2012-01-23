@@ -2,7 +2,7 @@ require 'rest_client'
 
 module Farm
   class Http
-    def heroku_run(cmd)
+    def self.heroku_run(cmd)
       endpoint = RestClient::Resource.new "https://api.heroku.com/apps/#{ENV['APP_NAME']}/ps",
         '', ENV['API_KEY']
       endpoint.post :command => cmd, :accept => 'application/json'
