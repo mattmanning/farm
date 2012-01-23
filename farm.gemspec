@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
 
   gem.author      = "Matt Manning"
   gem.email       = "matt.manning@gmail.com"
-  gem.homepage    = "http://mwmanning.com/"
+  gem.homepage    = "https://github.com/mattmanning/farm"
   gem.summary     = "Run background jobs as one-off Heroku processes."
   gem.description = "Run background jobs as one-off Heroku processes."
 
