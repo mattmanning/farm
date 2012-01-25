@@ -16,9 +16,10 @@ The installation is finished.
 
 ### Other Ruby apps:
 
-Add the following line to your Rakefile:
+Add the following lines to your Rakefile:
 
-    load 'farm/tasks'
+    require 'farm'
+    require 'farm/tasks'
 
 The Rakefile must also define a task called 'environment'. This task should load your application so that the farmed-out method can be executed in context.
 

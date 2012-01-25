@@ -1,5 +1,4 @@
 require 'farm'
-require 'rails'
 
 module Farm
   class Railtie < Rails::Railtie
