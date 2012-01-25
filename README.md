@@ -1,15 +1,29 @@
 Farm
 ====
 
-"Farm out" background jobs by running them immediately as a one-off Heroku process. Only works with Rails >= 3.0.
+"Farm out" background jobs by running them immediately as a one-off Heroku process.
 
-Install:
+Installation and Setup:
+-----------------------
 
     gem install farm
 
 Set the environment variables `API_KEY` and `APP_NAME` to your Heroku API key and the name of your app on Heroku, respectively.
 
-Call with the farm method:
+### Rails >= 3.0:
+
+The installation is finished.
+
+### Other Ruby apps:
+
+Add the following line to your Rakefile:
+
+    load 'farm/tasks'
+
+The Rakefile must also define a task called 'environment'. This task should load your application so that the farmed-out method can be executed in context.
+
+Usage:
+------
 
     Foo.bar       #=> Run directly
     Foo.farm.bar  #=> Run in background as one-off Heroku process.
