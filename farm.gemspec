@@ -13,6 +13,7 @@ Gem::Specification.new do |gem|
 
   gem.files = %x{ git ls-files }.split("\n").select { |d| d =~ %r{^(README|lib/)} }
 
+  gem.add_dependency "json", "~> 1.6.5"
   gem.add_dependency "rails", "~> 3.0"
   gem.add_dependency "rake"
   gem.add_dependency "rest-client", "~> 1.6.7"
